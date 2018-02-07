@@ -1,5 +1,5 @@
-# Koto
-Koto
+# Application Starter
+Application Starter
 
 ### Dependencies
 - Web
