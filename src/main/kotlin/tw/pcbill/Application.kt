@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class PcbillApplication
+class Application
 
 fun main(args: Array<String>) {
-    runApplication<PcbillApplication>(*args)
+    runApplication<Application>(*args)
 }
