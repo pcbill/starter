@@ -15,13 +15,15 @@ Application Starter
 
 ### Command
 
-Local (develop) environment
+#### Local (develop) environment
 
 ```
 $ gradlew -Pwithout_security bootRun
 ```
 
-Product environment
+db viewer /h2-console
+
+#### Product environment
 
 ```
 $ gradlew -Pprod bootRun
