@@ -1,0 +1,39 @@
+//ext {
+//    logbackLoglevel = "INFO"
+//}
+
+def profiles = 'prod'
+
+dependencies {
+    runtime('org.postgresql:postgresql')
+}
+
+//if (project.hasProperty('no-liquibase')) {
+//    profiles += ',no-liquibase'
+//}
+//
+//if (project.hasProperty('swagger')) {
+//    profiles += ',swagger'
+//}
+//
+//bootRun {
+//    args = []
+//}
+//
+
+processResources {
+    filesMatching('**/application.yml') {
+        filter {
+            it.replace('#spring.profiles.active#', profiles)
+        }
+//        filter {
+//            it.replace('#project.version#', version)
+//        }
+    }
+//    filesMatching('**/logback-spring.xml') {
+//        filter {
+//            it.replace('#logback.loglevel#', logbackLoglevel)
+//        }
+//    }
+}
+

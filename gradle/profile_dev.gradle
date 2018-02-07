@@ -1,0 +1,39 @@
+//ext {
+//    logbackLoglevel = "DEBUG"
+//}
+
+def profiles = 'dev'
+
+dependencies {
+    compile "com.h2database:h2"
+
+    runtime('org.springframework.boot:spring-boot-devtools')
+}
+
+//if (project.hasProperty('no-liquibase')) {
+//    profiles += ',no-liquibase'
+//}
+//
+//bootRun {
+//    args = []
+//}
+//
+//war {
+//    webAppDirName = 'src/main/webapp/'
+//}
+
+processResources {
+    filesMatching('**/application.yml') {
+        filter {
+            it.replace('#spring.profiles.active#', profiles)
+        }
+//        filter {
+//            it.replace('#project.version#', version)
+//        }
+    }
+//    filesMatching('**/logback-spring.xml') {
+//        filter {
+//            it.replace('#logback.loglevel#', logbackLoglevel)
+//        }
+//    }
+}
