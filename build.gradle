@@ -1,3 +1,8 @@
+/**
+ * lib
+ * - liquibase gradle plugin
+ * - 
+ */
 buildscript {
 	ext {
 		kotlinVersion = '1.2.21'
@@ -12,6 +17,11 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+
+                // for data class with no-arg contructure
+                classpath("org.jetbrains.kotlin:kotlin-noarg:${kotlinVersion}")
+
+                // liquibase gradle plugin 1/2
                 classpath("org.liquibase:liquibase-gradle-plugin:1.2.4")
 	}
 }
@@ -21,6 +31,8 @@ apply plugin: 'kotlin-spring'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+
+// liquibase gradle plugin 2/2
 apply plugin: 'org.liquibase.gradle'
 
 group = 'tw'
