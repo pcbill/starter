@@ -18,7 +18,7 @@ buildscript {
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
 
-                // for data class with no-arg contructure
+                // data class with no-arg contructure 1/2
                 classpath("org.jetbrains.kotlin:kotlin-noarg:${kotlinVersion}")
 
                 // liquibase gradle plugin 1/2
@@ -32,6 +32,8 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
+// data class with no-arg contructure 2/2
+apply plugin: 'kotlin-jpa'
 // liquibase gradle plugin 2/2
 apply plugin: 'org.liquibase.gradle'
 
